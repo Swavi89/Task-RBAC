@@ -1,0 +1,58 @@
+<svg id="SvgjsSvg1184" width="360" height="271.79999999999995" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" style="background: transparent;"><foreignObject x="0" y="0" width="360" height="271.79999999999995"><div class="apexcharts-legend apexcharts-align-center apx-legend-position-bottom" xmlns="http://www.w3.org/1999/xhtml" style="inset: auto 0px 1px; position: absolute; max-height: 150px;"><div class="apexcharts-legend-series" rel="1" seriesname="Cardiology" data:collapsed="false" style="margin: 2px 5px;"><span class="apexcharts-legend-marker" rel="1" data:collapsed="false" style="background: rgb(17, 106, 239) !important; color: rgb(17, 106, 239); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></span><span class="apexcharts-legend-text" rel="1" i="0" data:default-text="Cardiology" data:collapsed="false" style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400;">Cardiology</span></div><div class="apexcharts-legend-series" rel="2" seriesname="Orthopedics" data:collapsed="false" style="margin: 2px 5px;"><span class="apexcharts-legend-marker" rel="2" data:collapsed="false" style="background: rgb(2, 184, 111) !important; color: rgb(2, 184, 111); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></span><span class="apexcharts-legend-text" rel="2" i="1" data:default-text="Orthopedics" data:collapsed="false" style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400;">Orthopedics</span></div><div class="apexcharts-legend-series" rel="3" seriesname="Neurology" data:collapsed="false" style="margin: 2px 5px;"><span class="apexcharts-legend-marker" rel="3" data:collapsed="false" style="background: rgb(80, 198, 96) !important; color: rgb(80, 198, 96); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></span><span class="apexcharts-legend-text" rel="3" i="2" data:default-text="Neurology" data:collapsed="false" style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400;">Neurology</span></div><div class="apexcharts-legend-series" rel="4" seriesname="Gastroenterology" data:collapsed="false" style="margin: 2px 5px;"><span class="apexcharts-legend-marker" rel="4" data:collapsed="false" style="background: rgb(159, 213, 81) !important; color: rgb(159, 213, 81); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></span><span class="apexcharts-legend-text" rel="4" i="3" data:default-text="Gastroenterology" data:collapsed="false" style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400;">Gastroenterology</span></div><div class="apexcharts-legend-series" rel="5" seriesname="Anatomy" data:collapsed="false" style="margin: 2px 5px;"><span class="apexcharts-legend-marker" rel="5" data:collapsed="false" style="background: rgb(237, 227, 66) !important; color: rgb(237, 227, 66); height: 12px; width: 12px; left: 0px; top: 0px; border-width: 0px; border-color: rgb(255, 255, 255); border-radius: 12px;"></span><span class="apexcharts-legend-text" rel="5" i="4" data:default-text="Anatomy" data:collapsed="false" style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400;">Anatomy</span></div></div><style type="text/css">	
+    	
+      .apexcharts-legend {	
+        display: flex;	
+        overflow: auto;	
+        padding: 0 10px;	
+      }	
+      .apexcharts-legend.apx-legend-position-bottom, .apexcharts-legend.apx-legend-position-top {	
+        flex-wrap: wrap	
+      }	
+      .apexcharts-legend.apx-legend-position-right, .apexcharts-legend.apx-legend-position-left {	
+        flex-direction: column;	
+        bottom: 0;	
+      }	
+      .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-left, .apexcharts-legend.apx-legend-position-top.apexcharts-align-left, .apexcharts-legend.apx-legend-position-right, .apexcharts-legend.apx-legend-position-left {	
+        justify-content: flex-start;	
+      }	
+      .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center, .apexcharts-legend.apx-legend-position-top.apexcharts-align-center {	
+        justify-content: center;  	
+      }	
+      .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-right, .apexcharts-legend.apx-legend-position-top.apexcharts-align-right {	
+        justify-content: flex-end;	
+      }	
+      .apexcharts-legend-series {	
+        cursor: pointer;	
+        line-height: normal;	
+      }	
+      .apexcharts-legend.apx-legend-position-bottom .apexcharts-legend-series, .apexcharts-legend.apx-legend-position-top .apexcharts-legend-series{	
+        display: flex;	
+        align-items: center;	
+      }	
+      .apexcharts-legend-text {	
+        position: relative;	
+        font-size: 14px;	
+      }	
+      .apexcharts-legend-text *, .apexcharts-legend-marker * {	
+        pointer-events: none;	
+      }	
+      .apexcharts-legend-marker {	
+        position: relative;	
+        display: inline-block;	
+        cursor: pointer;	
+        margin-right: 3px;	
+        border-style: solid;
+      }	
+      	
+      .apexcharts-legend.apexcharts-align-right .apexcharts-legend-series, .apexcharts-legend.apexcharts-align-left .apexcharts-legend-series{	
+        display: inline-block;	
+      }	
+      .apexcharts-legend-series.apexcharts-no-click {	
+        cursor: auto;	
+      }	
+      .apexcharts-legend .apexcharts-hidden-zero-series, .apexcharts-legend .apexcharts-hidden-null-series {	
+        display: none !important;	
+      }	
+      .apexcharts-inactive-legend {	
+        opacity: 0.45;	
+      }</style></foreignObject><g id="SvgjsG1186" class="apexcharts-inner apexcharts-graphical" transform="translate(12, 0)"><defs id="SvgjsDefs1185"><clipPath id="gridRectMask1qkbt2i4"><rect id="SvgjsRect1187" width="342" height="221" x="-2" y="0" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath><clipPath id="forecastMask1qkbt2i4"></clipPath><clipPath id="nonForecastMask1qkbt2i4"></clipPath><clipPath id="gridRectMarkerMask1qkbt2i4"><rect id="SvgjsRect1188" width="342" height="225" x="-2" y="-2" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath></defs><g id="SvgjsG1189" class="apexcharts-pie"><g id="SvgjsG1190" transform="translate(0, 0) scale(1)"><g id="SvgjsG1191" class="apexcharts-slices"><g id="SvgjsG1192" class="apexcharts-series apexcharts-pie-series" seriesName="Cardiology" rel="1" data:realIndex="0"><path id="SvgjsPath1193" d="M 169 6.695121951219505 A 103.8048780487805 103.8048780487805 0 0 1 258.89766142698954 162.40243902439025 L 169 110.5 L 169 6.695121951219505" fill="rgba(17,106,239,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-pie-slice-0" index="0" j="0" data:angle="120" data:startAngle="0" data:strokeWidth="0" data:value="50" data:pathOrig="M 169 6.695121951219505 A 103.8048780487805 103.8048780487805 0 0 1 258.89766142698954 162.40243902439025 L 169 110.5 L 169 6.695121951219505"></path></g><g id="SvgjsG1194" class="apexcharts-series apexcharts-pie-series" seriesName="Orthopedics" rel="2" data:realIndex="1"><path id="SvgjsPath1195" d="M 258.89766142698954 162.40243902439025 A 103.8048780487805 103.8048780487805 0 0 1 107.98502356690815 194.47991044048234 L 169 110.5 L 258.89766142698954 162.40243902439025" fill="rgba(2,184,111,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-pie-slice-1" index="0" j="1" data:angle="96" data:startAngle="120" data:strokeWidth="0" data:value="40" data:pathOrig="M 258.89766142698954 162.40243902439025 A 103.8048780487805 103.8048780487805 0 0 1 107.98502356690815 194.47991044048234 L 169 110.5 L 258.89766142698954 162.40243902439025"></path></g><g id="SvgjsG1196" class="apexcharts-series apexcharts-pie-series" seriesName="Neurology" rel="3" data:realIndex="2"><path id="SvgjsPath1197" d="M 107.98502356690815 194.47991044048234 A 103.8048780487805 103.8048780487805 0 0 1 70.27569430848357 78.42252858390786 L 169 110.5 L 107.98502356690815 194.47991044048234" fill="rgba(80,198,96,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-pie-slice-2" index="0" j="2" data:angle="72" data:startAngle="216" data:strokeWidth="0" data:value="30" data:pathOrig="M 107.98502356690815 194.47991044048234 A 103.8048780487805 103.8048780487805 0 0 1 70.27569430848357 78.42252858390786 L 169 110.5 L 107.98502356690815 194.47991044048234"></path></g><g id="SvgjsG1198" class="apexcharts-series apexcharts-pie-series" seriesName="Gastroenterology" rel="4" data:realIndex="3"><path id="SvgjsPath1199" d="M 70.27569430848357 78.42252858390786 A 103.8048780487805 103.8048780487805 0 0 1 126.77875236754622 15.669525177392444 L 169 110.5 L 70.27569430848357 78.42252858390786" fill="rgba(159,213,81,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-pie-slice-3" index="0" j="3" data:angle="48" data:startAngle="288" data:strokeWidth="0" data:value="20" data:pathOrig="M 70.27569430848357 78.42252858390786 A 103.8048780487805 103.8048780487805 0 0 1 126.77875236754622 15.669525177392444 L 169 110.5 L 70.27569430848357 78.42252858390786"></path></g><g id="SvgjsG1200" class="apexcharts-series apexcharts-pie-series" seriesName="Anatomy" rel="5" data:realIndex="4"><path id="SvgjsPath1201" d="M 126.77875236754622 15.669525177392444 A 103.8048780487805 103.8048780487805 0 0 1 168.98188263107613 6.695123532258208 L 169 110.5 L 126.77875236754622 15.669525177392444" fill="rgba(237,227,66,1)" fill-opacity="1" stroke-opacity="1" stroke-linecap="butt" stroke-width="0" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-pie-slice-4" index="0" j="4" data:angle="24" data:startAngle="336" data:strokeWidth="0" data:value="10" data:pathOrig="M 126.77875236754622 15.669525177392444 A 103.8048780487805 103.8048780487805 0 0 1 168.98188263107613 6.695123532258208 L 169 110.5 L 126.77875236754622 15.669525177392444"></path></g></g></g></g><line id="SvgjsLine1202" x1="0" y1="0" x2="338" y2="0" stroke="" stroke-dasharray="0" stroke-width="1" stroke-linecap="butt" class="apexcharts-ycrosshairs"></line><line id="SvgjsLine1203" x1="0" y1="0" x2="338" y2="0" stroke-dasharray="0" stroke-width="0" stroke-linecap="butt" class="apexcharts-ycrosshairs-hidden"></line></g></svg>

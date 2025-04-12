@@ -1,0 +1,69 @@
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .svg-color-change {
+    filter: brightness(0) saturate(100%);
+    transition: filter 0.3s, drop-shadow 0.3s;
+  }
+  .group:hover .svg-color-change {
+    filter: brightness(0) saturate(100%) invert(25%) sepia(85%) saturate(634%)
+      hue-rotate(178deg) brightness(130%) contrast(101%);
+  }
+  
+  .sidebar {
+    transform: translateX(-250px) !important;
+  }
+  .content-screen {
+    width: 100% !important;
+  }
+  
+  .links-shadow {
+    box-shadow: inset 1.5px 1.5px 0px rgba(255, 255, 255, 0.25),
+      inset -1.5px -1.5px 0px rgba(0, 0, 0, 0.1);
+  }
+  .container-shadow {
+    box-shadow: 0px 2px 6px rgba(40, 90, 185, 0.1);
+  }
+  
+  .img-shadow {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  table tr {
+    border-bottom: 1px solid #cdd6dc;
+  }
+  
+  /* .show {
+    display: block !important;
+  } */
+  
+  .dropdown-menu {
+    transition-property: max-height;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .doctor-list-table th:before {
+    right: 0.6em;
+    content: "↑";
+    position: absolute;
+    bottom: 0.5em;
+    display: block;
+    opacity: 0.3;
+  }
+  
+  .doctor-list-table th:after {
+    right: 1em;
+    content: "↓";
+    position: absolute;
+    bottom: 0.5em;
+    display: block;
+    opacity: 0.3;
+  }
+  
+  .table-select {
+    background-image: url("./images/svg/select-dropdown-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    background-size: 16px 12px;
+  }
