@@ -7,6 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="{{asset ('public/assets/css/style.css')}}" />
   <title>@yield('title') | Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" />
   <script src="{{asset('public/assets/js/script.js')}}"></script>
 </head>
 
