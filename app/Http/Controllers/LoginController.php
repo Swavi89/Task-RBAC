@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Permission;
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
@@ -11,7 +14,10 @@ class LoginController extends Controller
 {
     public function dashboard()
     {
-        return view('dashboard');
+        $user = User::all();
+        $role = Role::all();
+        $permission = Permission::all();
+        return view('dashboard', ['user' => $user, 'role'=>$role, 'permission' => $permission]);
     }
 
     public function login()
@@ -19,7 +25,7 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function customLogin(Request $request)
+    public function authenticate(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'email_or_mobile' => 'required|string',
@@ -43,16 +49,7 @@ class LoginController extends Controller
         }
 
         if (Auth::attempt($credentials)) {
-            $user = Auth::user();
-            if ($user->status != 'active') {
-                Auth::logout();
-                return redirect('/login')->withError('Your account has been deactivated');
-            }
-            if (!in_array($user->role, ['admin', 'superadmin'])) {
-                Auth::logout();
-                return redirect('/login')->withError('You have no access to this account');
-            }
-            return redirect('/dashboard');
+            return redirect('/');
         }
         return redirect('/login')->withError('Invalid login details!');
     }

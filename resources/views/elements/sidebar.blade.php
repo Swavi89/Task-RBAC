@@ -5,7 +5,7 @@
             <img src="{{asset('public/assets/images/png/profile-1.png')}}" alt="profile">
         </div>
         <div>
-            <h5 class="mb-1 text-nowrap truncate text-[#272727] text-lg font-semibold">Swaviman Sahoo</h5>
+            <h5 class="mb-1 text-nowrap truncate text-[#272727] text-lg font-semibold">{{Auth::user()->name}}</h5>
             <p class="text-sm text-nowrap truncate text-[#272727]">Super Admin</p>
         </div>
     </div>
@@ -21,7 +21,7 @@
                 </a>
             </li>
             <li class="mb-[1px]">
-                <a href="/dentist-dashboard.html"
+                <a href="{{url('/blogs')}}"
                     class="flex items-center gap-4 py-2 pr-6 pl-4 text-black border-l-2 border-transparent hover:border-[#116aef] hover:bg-[#e9f2ff] group">
                     <div class="w-9 h-9 flex justify-center items-center rounded-lg bg-[#e9f2ff] group-hover:bg-white">
                         <img src="{{asset('public/assets/images/svg/home-5-line.svg')}}" alt="home6" class="w-6 h-6 svg-color-change">
@@ -46,18 +46,18 @@
                 <ul
                     class="list-none m-0 p-0 text-sm dropdown-menu bg-white overflow-hidden transition-all duration-300 ease-in-out max-h-0">
                     <li>
-                        <a href="void:javascript(0)"
+                        <a href="{{url('/users')}}"
                             class="py-2.5 pr-4 pl-16 text-black hover:text-[#116aef] active:text-[#116aef] block">
                             Users
                         </a>
                     </li>
                     <li>
-                        <a href="void:javascript(0)"
+                        <a href="{{url('/role-with-permissions')}}"
                             class="py-2.5 pr-4 pl-16 text-black hover:text-[#116aef] active:text-[#116aef] block">Roles
                         </a>
                     </li>
                     <li>
-                        <a href="void:javascript(0)"
+                        <a href="{{url('/permissions')}}"
                             class="py-2.5 pr-4 pl-16 text-black hover:text-[#116aef] active:text-[#116aef] block">Permissions
                         </a>
                     </li>
@@ -72,7 +72,7 @@
             </div>
             <div>
                 <p class="mb-1 text-sm font-light">Emergency Contact</p>
-                <h5 class="text-lg">0987654321</h5>
+                <h5 class="text-lg">8093478546</h5>
             </div>
         </div>
     </div>
