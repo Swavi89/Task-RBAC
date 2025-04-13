@@ -1,6 +1,7 @@
 @extends('admin-layout')
 @section('title', $user->id ? 'Edit User' : 'Add User')
 @section('content')
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <div
     class="py-2 px-6 sticky top-[50px] flex gap-6 justify-between items-center bg-[#f6f9fb] z-10 container-shadow">
     <ul class="list-none flex items-center">
@@ -55,6 +56,27 @@
                                 <input type="text" name="mobile" minlength="10" maxlength="10" placeholder="Enter Mobile Number" class="numeric-only h-full rounded-r-lg py-1.5 px-3 border border-[#cdd6dc] focus-visible:outline-0 focus:border-[#88b5f7] w-[calc(100%-46px)]" value="{{ old('mobile', !empty($user->mobile) ? $user->mobile : '') }}" fdprocessedid="upm68d">
                             </div>
                         </div>
+                        <div class="sm:w-[48.5%] w-full">
+                            <label for="roles" class="mb-2 inline-block">
+                                Select Roles <span class="text-[#ff5a39]">*</span>
+                            </label>
+                            <div class="w-full h-9 relative flex items-center">
+                                <span class="h-full flex justify-center items-center rounded-l-lg py-1.5 px-3 border border-[#cdd6dc] bg-white">
+                                    <img src="{{ asset('public/assets/images/form-icons/vip-crown-2-line.svg') }}" alt="icon" class="w-5">
+                                </span>
+                                <select
+                                    class="select2-multiple rounded-r-lg h-full border border-[#cdd6dc] focus-visible:outline-0 focus:border-[#88b5f7] w-[calc(100%-46px)] px-3 py-1.5"
+                                    name="roles[]" multiple>
+                                    @foreach($roles as $id => $role)
+                                    @php
+                                    $selected = in_array($id, $user->roles->pluck('id')->toArray()) ? 'selected' : '';
+                                    @endphp
+                                    <option value="{{ $id }}" {{ $selected }}>{{ $role }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
                         @if(empty($user->id))
                         <div class="sm:w-[48.5%] w-full">
                             <label class="mb-2 inline-block">Password</label>
@@ -83,8 +105,10 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script>
     $(document).ready(function() {
+        $('.select2-multiple').select2();
         $('.numeric-only').on('input', function(e) {
             var input = $(this);
             var value = input.val();
