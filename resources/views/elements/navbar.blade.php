@@ -11,7 +11,7 @@
                     <a href="void:javascript(0)"
                         class="w-9 h-9 rounded-md flex justify-center items-center cursor-pointer links-shadow">
                         @php
-                        $fullName = Auth::user()->name; // No curly braces here
+                        $fullName = Auth::user()->name;
                         $subName = strtoupper(substr($fullName, 0, 1) . substr($fullName, strpos($fullName, ' ') + 1, 1)); // "AK"
                         @endphp
                         <p class="text-white font-bold">{{ $subName }}</p>

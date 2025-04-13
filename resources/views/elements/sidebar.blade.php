@@ -6,59 +6,62 @@
         </div>
         <div>
             <h5 class="mb-1 text-nowrap truncate text-[#272727] text-lg font-semibold">{{Auth::user()->name}}</h5>
-            <p class="text-sm text-nowrap truncate text-[#272727]">Super Admin</p>
+            <p class="text-sm text-nowrap truncate text-[#272727]">{{Auth::user()->roles->first()->name ?? ''}}</p>
         </div>
     </div>
     <div class="w-full h-[calc(100%-220px)] overflow-y-auto hide-scrollbar">
         <ul class="list-none m-0 p-0">
             <li class="mb-[1px]">
                 <a href="{{url('/')}}"
-                    class="flex items-center gap-4 py-2 pr-6 pl-4 text-black bg-[#e9f2ff] border-l-2 border-transparent hover:border-[#116aef]">
-                    <div class="w-9 h-9 flex justify-center items-center rounded-lg bg-[#116aef]">
-                        <img src="{{asset('public/assets/images/svg/home-6-line.svg')}}" alt="home6" class="w-6 h-6 invert">
+                    class="flex items-center gap-4 py-2 pr-6 pl-4 text-black {{ Request::is('/') ? 'bg-[#e9f2ff] border-l-2 border-[#116aef]' : 'border-l-2 border-transparent hover:border-[#116aef] hover:bg-[#e9f2ff]' }} group">
+                    <div class="w-9 h-9 flex justify-center items-center rounded-lg {{ Request::is('/') ? 'bg-[#116aef]' : 'bg-[#e9f2ff] group-hover:bg-white' }}">
+                        <img src="{{asset('public/assets/images/svg/home-6-line.svg')}}" alt="home6" class="w-6 h-6 {{ Request::is('/') ? 'invert' : 'svg-color-change' }}">
                     </div>
-                    <span class="text-[#116aef] text-sm">Dashboard</span>
+                    <span class="{{ Request::is('/') ? 'text-[#116aef]' : 'text-black' }} text-sm">Dashboard</span>
                 </a>
             </li>
+            @hasPermission('create_blogs')
             <li class="mb-[1px]">
                 <a href="{{url('/blogs')}}"
-                    class="flex items-center gap-4 py-2 pr-6 pl-4 text-black border-l-2 border-transparent hover:border-[#116aef] hover:bg-[#e9f2ff] group">
-                    <div class="w-9 h-9 flex justify-center items-center rounded-lg bg-[#e9f2ff] group-hover:bg-white">
-                        <img src="{{asset('public/assets/images/svg/home-5-line.svg')}}" alt="home6" class="w-6 h-6 svg-color-change">
+                    class="flex items-center gap-4 py-2 pr-6 pl-4 text-black {{ Request::is('blogs') || Request::is('blogs/*') ? 'bg-[#e9f2ff] border-l-2 border-[#116aef]' : 'border-l-2 border-transparent hover:border-[#116aef] hover:bg-[#e9f2ff]' }} group">
+                    <div class="w-9 h-9 flex justify-center items-center rounded-lg {{ Request::is('blogs') || Request::is('blogs/*') ? 'bg-[#116aef]' : 'bg-[#e9f2ff] group-hover:bg-white' }}">
+                        <img src="{{asset('public/assets/images/svg/home-5-line.svg')}}" alt="home6" class="w-6 h-6 {{ Request::is('blogs') || Request::is('blogs/*') ? 'invert' : 'svg-color-change' }}">
                     </div>
-                    <span class="text-black text-sm">Blogs</span>
+                    <span class="{{ Request::is('blogs') || Request::is('blogs/*') ? 'text-[#116aef]' : 'text-black' }} text-sm">Blogs</span>
                 </a>
             </li>
+            @endhasPermission
             <li class="mb-[1px]">
                 <a href="javascript:void(0);"
-                    class="dropdown-toggle flex items-center gap-4 justify-between py-2 pr-6 pl-4 text-black border-l-2 border-transparent hover:border-[#116aef] hover:bg-[#e9f2ff] group">
+                    class="dropdown-toggle flex items-center gap-4 justify-between py-2 pr-6 pl-4 text-black {{ Request::is('users') || Request::is('users/*') || Request::is('role-with-permissions') || Request::is('permissions') || Request::is('role-with-permissions/*') || Request::is('permissions/*') ? 'bg-[#e9f2ff] border-l-2 border-[#116aef]' : 'border-l-2 border-transparent hover:border-[#116aef] hover:bg-[#e9f2ff]' }} group">
                     <div class="flex items-center gap-4">
-                        <div class="w-9 h-9 flex justify-center items-center rounded-lg bg-[#e9f2ff] group-hover:bg-white">
-                            <img src="{{asset('public/assets/images/svg/stethoscope-line.svg')}}" alt="home6" class="w-6 h-6 svg-color-change">
+                        <div class="w-9 h-9 flex justify-center items-center rounded-lg {{ Request::is('users') || Request::is('users/*') || Request::is('role-with-permissions') || Request::is('permissions') || Request::is('role-with-permissions/*') || Request::is('permissions/*') ? 'bg-[#116aef]' : 'bg-[#e9f2ff] group-hover:bg-white' }}">
+                            <img src="{{asset('public/assets/images/svg/stethoscope-line.svg')}}" alt="home6" class="w-6 h-6 {{ Request::is('users') || Request::is('users/*') || Request::is('role-with-permissions') || Request::is('permissions') || Request::is('role-with-permissions/*') || Request::is('permissions/*') ? 'invert' : 'svg-color-change' }}">
                         </div>
-                        <span class="text-black text-sm">Users</span>
+                        <span class="{{ Request::is('users') || Request::is('users/*') || Request::is('role-with-permissions') || Request::is('role-with-permissions/*') || Request::is('permissions') || Request::is('permissions/*') ? 'text-[#116aef]' : 'text-black' }} text-sm">Users</span>
                     </div>
                     <div class="w-6 h-6">
                         <img src="{{asset('public/assets/images/svg/arrow-right.svg')}}" alt="rightarrow" id="dropdown-arrow"
-                            class="transition-transform duration-300 ease-in-out transform">
+                            class="transition-transform duration-300 ease-in-out transform {{ Request::is('users') || Request::is('users/*') || Request::is('role-with-permissions') || Request::is('role-with-permissions/*') || Request::is('permissions') || Request::is('permissions/*') ? 'rotate-90' : '' }}">
                     </div>
                 </a>
                 <ul
-                    class="list-none m-0 p-0 text-sm dropdown-menu bg-white overflow-hidden transition-all duration-300 ease-in-out max-h-0">
+                    class="list-none m-0 p-0 text-sm dropdown-menu bg-white overflow-hidden transition-all duration-300 ease-in-out {{ Request::is('users') || Request::is('users/*') || Request::is('role-with-permissions') || Request::is('role-with-permissions/*')
+                     || Request::is('permissions') || Request::is('permissions/*') ? 'max-h-[300px]' : 'max-h-0' }}">
                     <li>
                         <a href="{{url('/users')}}"
-                            class="py-2.5 pr-4 pl-16 text-black hover:text-[#116aef] active:text-[#116aef] block">
+                            class="py-2.5 pr-4 pl-16 {{ Request::is('users') || Request::is('users/*') ? 'text-[#116aef]' : 'text-black hover:text-[#116aef] active:text-[#116aef]' }} block">
                             Users
                         </a>
                     </li>
                     <li>
                         <a href="{{url('/role-with-permissions')}}"
-                            class="py-2.5 pr-4 pl-16 text-black hover:text-[#116aef] active:text-[#116aef] block">Roles
+                            class="py-2.5 pr-4 pl-16 {{ Request::is('role-with-permissions') || Request::is('role-with-permissions/*') ? 'text-[#116aef]' : 'text-black hover:text-[#116aef] active:text-[#116aef]' }} block">Roles
                         </a>
                     </li>
                     <li>
                         <a href="{{url('/permissions')}}"
-                            class="py-2.5 pr-4 pl-16 text-black hover:text-[#116aef] active:text-[#116aef] block">Permissions
+                            class="py-2.5 pr-4 pl-16 {{ Request::is('permissions') || Request::is('permissions/*') ? 'text-[#116aef]' : 'text-black hover:text-[#116aef] active:text-[#116aef]' }} block">Permissions
                         </a>
                     </li>
                 </ul>

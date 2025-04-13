@@ -7,7 +7,7 @@ Route::get('/', function () {
 });
 
 /* Dashboard */
-Route::get('/', 'LoginController@dashboard');
+Route::get('/', 'LoginController@dashboard')->middleware('auth');
 
 /* Login & Logout */
 Route::get('login', 'LoginController@login')->name('login');
@@ -41,7 +41,7 @@ Route::get('/role-with-permissions/{id}/delete', 'RoleController@deleteRoleWithP
 
 /* Blogs */
 Route::get('/blogs', 'BlogController@blogs')->middleware('auth', 'permission:view_blogs');
-Route::get('/blogs/add', 'BlogController@addBlog')->middleware('auth', 'permission:add_blogs');
+Route::get('/blogs/add', 'BlogController@addBlog')->middleware('auth', 'permission:create_blogs');
 Route::get('/blogs/{id}/edit', 'BlogController@editBlog')->middleware('auth', 'permission:edit_blogs');
 Route::post('/blogs/save', 'BlogController@saveBlog')->middleware('auth');
 Route::get('/blogs/{id}/delete', 'BlogController@deleteBlog')->middleware('auth', 'permission:delete_blogs');
