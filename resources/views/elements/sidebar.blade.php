@@ -30,6 +30,15 @@
                     <span class="{{ Request::is('blogs') || Request::is('blogs/*') ? 'text-[#116aef]' : 'text-black' }} text-sm">Blogs</span>
                 </a>
             </li>
+            <li class="mb-[1px]">
+                <a href="{{url('/razorpay')}}"
+                    class="flex items-center gap-4 py-2 pr-6 pl-4 text-black {{ Request::is('razorpay') || Request::is('razorpay/*') ? 'bg-[#e9f2ff] border-l-2 border-[#116aef]' : 'border-l-2 border-transparent hover:border-[#116aef] hover:bg-[#e9f2ff]' }} group">
+                    <div class="w-9 h-9 flex justify-center items-center rounded-lg {{ Request::is('razorpay') || Request::is('razorpay/*') ? 'bg-[#116aef]' : 'bg-[#e9f2ff] group-hover:bg-white' }}">
+                        <img src="{{asset('public/assets/images/svg/secure-payment-line.svg')}}" alt="home6" class="w-6 h-6 {{ Request::is('razorpay') || Request::is('razorpay/*') ? 'invert' : 'svg-color-change' }}">
+                    </div>
+                    <span class="{{ Request::is('razorpay') || Request::is('razorpay/*') ? 'text-[#116aef]' : 'text-black' }} text-sm">Razorpay</span>
+                </a>
+            </li>
             @endhasPermission
             <li class="mb-[1px]">
                 <a href="javascript:void(0);"

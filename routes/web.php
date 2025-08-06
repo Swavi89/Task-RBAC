@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PaymentGatewayController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -45,3 +46,7 @@ Route::get('/blogs/add', 'BlogController@addBlog')->middleware('auth', 'permissi
 Route::get('/blogs/{id}/edit', 'BlogController@editBlog')->middleware('auth', 'permission:edit_blogs');
 Route::post('/blogs/save', 'BlogController@saveBlog')->middleware('auth');
 Route::get('/blogs/{id}/delete', 'BlogController@deleteBlog')->middleware('auth', 'permission:delete_blogs');
+
+/* Payement Gateway Using Razorpay */
+Route::get('/razorpay', [PaymentGatewayController::class, 'razorPay'])->middleware('auth');
+Route::post('/razorpay/payment', [PaymentGatewayController::class, 'payViaRazorPay'])->name('razorpay.pay')->middleware('auth');
